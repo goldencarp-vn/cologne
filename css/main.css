@@ -6172,12 +6172,13 @@ header .des {
   header .des {
     font-size: 2.25rem; }
   header .scroll-down {
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem; }
+    font-size: 1.75rem; }
   header .des {
     padding-left: 60px; } }
 
 @media (min-width: 1200px) {
+  header .content {
+    margin-top: 0; }
   header .sub-title {
     margin: 0; }
   header .sub-title,

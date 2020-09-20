@@ -6225,7 +6225,7 @@ header .des {
 
 header.home {
   width: 100%;
-  height: 100vh;
+  height: 92vh;
   overflow: hidden;
   display: flex; }
   header.home .wrapper {
@@ -6234,6 +6234,9 @@ header.home {
     height: 100%; }
   header.home .logo {
     height: 10vh; }
+  @media (min-width: 1200px) {
+    header.home {
+      height: 100vh; } }
 
 .main-content {
   padding-top: 65px; }

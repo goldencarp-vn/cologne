@@ -6106,7 +6106,7 @@ img {
   background-size: cover;
   background-position: center; }
 
-.contain-bg, .faq-list .card-header .collapse-icon {
+.contain-bg, .faq-list .collapse-icon {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center; }
@@ -6126,10 +6126,12 @@ img {
   color: #fff;
   background: #2a2a2d;
   border-radius: 10px;
-  margin-bottom: 64px; }
+  margin-bottom: 64px;
+  transition: 0.3s; }
   .cta-btn:hover {
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    background: #000; }
   @media (min-width: 1000px) {
     .cta-btn {
       font-size: 2.125rem;
@@ -6137,61 +6139,66 @@ img {
       height: 107px;
       margin-bottom: 230px; } }
 
-header .content {
+header {
   text-transform: uppercase; }
-
-header .scroll-down {
-  font-family: Optima;
-  font-size: 1rem;
-  font-weight: normal;
-  font-style: normal;
-  margin-top: auto;
-  margin-bottom: 1rem;
-  white-space: nowrap;
-  text-transform: uppercase;
-  color: #53565a; }
-
-header .sub-title {
-  font-family: Optima;
-  font-size: 1.625rem;
-  font-weight: normal;
-  font-style: normal;
-  margin-bottom: 0;
-  line-height: 1.25;
-  margin: 16px 0; }
-
-header .des {
-  font-style: italic;
-  padding-left: 25px;
-  color: #53565a; }
-
-@media (min-width: 700px) {
-  header .content {
-    margin-top: 50px; }
+  header .scroll-down {
+    font-family: Optima;
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #53565a; }
   header .sub-title,
   header .des {
-    font-size: 2.25rem; }
-  header .scroll-down {
-    font-size: 1.75rem; }
-  header .des {
-    padding-left: 60px; } }
-
-@media (min-width: 1200px) {
-  header .content {
-    margin-top: 0; }
+    font-family: Optima;
+    font-size: 1.625rem;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 0; }
   header .sub-title {
-    margin: 0; }
-  header .sub-title,
+    line-height: 1.25;
+    margin: 16px 0; }
   header .des {
-    font-size: 3.75rem; }
-  header .scroll-down {
-    font-size: 1.875rem; } }
+    font-style: italic;
+    padding-left: 25px;
+    color: #53565a; }
+  @media (min-width: 700px) {
+    header .content {
+      margin-top: 50px; }
+    header .sub-title,
+    header .des {
+      font-size: 2.25rem; }
+    header .scroll-down {
+      font-size: 1.75rem; }
+    header .des {
+      padding-left: 60px; } }
+  @media (min-width: 1000px) {
+    header .sub-title,
+    header .des {
+      font-size: 3rem; } }
+  @media (min-width: 1200px) {
+    header .content {
+      margin-top: 0; }
+    header .sub-title {
+      margin: 0; }
+    header .sub-title,
+    header .des {
+      font-size: 3.75rem; }
+    header .scroll-down {
+      font-size: 1.875rem; } }
 
 .logo {
   font-family: opticopperplate light;
   font-size: 1.5rem;
   font-weight: normal;
   font-style: normal; }
+  .logo a {
+    color: #2a2a2d; }
+    .logo a:hover {
+      text-decoration: none; }
   @media (min-width: 700px) {
     .logo {
       font-size: 2.25rem; } }
@@ -6216,13 +6223,20 @@ header .des {
       width: 25%;
       margin-right: -20px;
       order: 1;
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+    .arrow-title .title {
+      font-size: 4.5rem;
+      letter-spacing: 12px; } }
   @media (min-width: 1000px) {
+    .arrow-title .content {
+      height: 40vh; }
     .arrow-title .arrow {
       width: auto; }
     .arrow-title .title {
-      font-size: 7.25rem;
-      letter-spacing: 12px; } }
+      font-size: 6.25rem; } }
+  @media (min-width: 1200px) {
+    .arrow-title .title {
+      font-size: 7.25rem; } }
 
 header.home {
   width: 100%;
@@ -6256,10 +6270,7 @@ header.home {
     font-style: normal;
     margin-bottom: 24px; }
   .main-content .item .content {
-    font-family: Optima;
     font-size: 1rem;
-    font-weight: normal;
-    font-style: normal;
     color: #53565a; }
   @media (min-width: 1200px) {
     .main-content .item {
@@ -6290,7 +6301,9 @@ header.home {
 .quote {
   margin-bottom: 32px; }
   .quote .content {
+    font-family: Optima;
     font-size: 1.75rem;
+    font-weight: normal;
     font-style: italic;
     margin-bottom: 30px;
     color: #53565a; }
@@ -6338,17 +6351,17 @@ header.faq {
       font-size: 1.5rem;
       font-weight: 600;
       font-style: normal; }
-    .faq-list .card-header .collapse-icon {
-      background-image: url(../images/icon/Vector-.svg);
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      border: unset;
-      outline: none;
-      background-color: transparent;
-      transition: 0.3s; }
-      .faq-list .card-header .collapse-icon.collapsed {
-        background-image: url(../images/icon/Vector+.svg); }
+  .faq-list .collapse-icon {
+    background-image: url(../images/icon/Vector-.svg);
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border: unset;
+    outline: none;
+    background-color: transparent;
+    transition: 0.3s; }
+    .faq-list .collapse-icon.collapsed {
+      background-image: url(../images/icon/Vector+.svg); }
   .faq-list .card-body {
     font-family: Optima;
     font-size: 1rem;
@@ -6361,6 +6374,9 @@ header.faq {
     .faq-list .card-header .question {
       font-size: 2rem; }
     .faq-list .card-body {
-      font-size: 1.5rem; } }
+      font-size: 1.5rem; }
+    .faq-list .collapse-icon {
+      width: 40px;
+      height: 40px; } }
 
 /*# sourceMappingURL=main.css.map */

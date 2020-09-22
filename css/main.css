@@ -6238,9 +6238,16 @@ header {
     .arrow-title .title {
       font-size: 7.25rem; } }
 
+.safari header.home {
+  height: 85vh; }
+
+@media (min-width: 1200px) {
+  .safari header.home {
+    height: 100vh; } }
+
 header.home {
   width: 100%;
-  height: 92vh;
+  height: 88vh;
   overflow: hidden;
   display: flex; }
   header.home .wrapper {
@@ -6254,12 +6261,10 @@ header.home {
       height: 100vh; } }
 
 .main-content {
-  padding-top: 65px; }
+  padding-top: 100px; }
   @media (min-width: 1200px) {
-    .main-content {
-      padding-top: 100px; }
-      .main-content .vector-3 {
-        margin-top: -28px; } }
+    .main-content .vector-3 {
+      margin-top: -28px; } }
 
 .main-content .item {
   margin-bottom: 48px; }
@@ -6305,8 +6310,7 @@ header.home {
     font-size: 1.75rem;
     font-weight: normal;
     font-style: italic;
-    margin-bottom: 30px;
-    color: #53565a; }
+    margin-bottom: 30px; }
   .quote .name {
     font-family: copperplate;
     font-size: 1.5rem;
